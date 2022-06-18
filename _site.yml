@@ -8,4 +8,6 @@ navbar:
       href: Journal.html
     - text: "Links"
       href: Links.html
+    - text: "de Ayala (2022)"
+      href: review.html
 output_dir: "docs"

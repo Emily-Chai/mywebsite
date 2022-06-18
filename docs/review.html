@@ -421,16 +421,6 @@ class="math inline">\(\sigma_e(\hat{\Theta}\mid\theta)=\sqrt{\frac{1}{\sum_{j
   } else {print(&quot;x can only take 1 or 0 as input value&quot;)}
 }
 
-one_PL_p &lt;- function(theta, delta, a, x) {
-  n = exp( a*(theta-delta) )    # numerator
-  d = 1+n                       # denominator
-  if (x == 1){
-    n / d
-  } else if (x == 0){
-    1 - n / d
-  } else {print(&quot;x can only take 1 or 0 as input value&quot;)}
-}
-
 one_PL_se &lt;- function(theta, delta_vec, a, x_vec){
   sum = 0
   for (i in 1:length(delta_vec)) {

@@ -54,16 +54,6 @@ one_PL_p <- function(theta, delta, a, x) {
   } else {print("x can only take 1 or 0 as input value")}
 }
 
-one_PL_p <- function(theta, delta, a, x) {
-  n = exp( a*(theta-delta) )    # numerator
-  d = 1+n                       # denominator
-  if (x == 1){
-    n / d
-  } else if (x == 0){
-    1 - n / d
-  } else {print("x can only take 1 or 0 as input value")}
-}
-
 one_PL_se <- function(theta, delta_vec, a, x_vec){
   sum = 0
   for (i in 1:length(delta_vec)) {

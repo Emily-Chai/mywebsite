@@ -40,6 +40,9 @@ $$
 
 ###  Numerical Example of SEE (p. 29)
 Given a person's location is -0.8378, his/her responses to the five items are (1, 1, 0, 0, 0), and the five item locations are (-1.9, -0.6, -0.25, 0.3, 0.45), here is how you get the SEE of almost a full logit (p. 29).
+
+Recall the we get variance error with $\sigma^2_e(\hat{\Theta}\mid\theta)=\frac{1}{\sum_{j = 1}^{L}\frac{(p'_j)^2}{p_j(1-p_j)}}$ and $\sigma_e(\hat{\Theta}\mid\theta)=\sqrt{\frac{1}{\sum_{j = 1}^{L}\alpha^2[p_j(1-p_j)]}}$
+
 ```{r}
 one_PL_p <- function(theta, delta, a, x) {
   n = exp( a*(theta-delta) )    # numerator
